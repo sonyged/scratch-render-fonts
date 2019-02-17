@@ -15,10 +15,6 @@
     "watch": "webpack --progress --colors --watch"
   },
   "homepage": "https://github.com/LLK/scratch-render-fonts#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/LLK/scratch-render-fonts.git"
-  },
   "dependencies": {
     "base64-loader": "1.0.0"
   },
