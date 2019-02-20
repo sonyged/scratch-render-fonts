@@ -22,13 +22,15 @@ for (const fontName in FONTS) {
         `font-family: "${fontName}";src: url("data:application/x-font-ttf;charset=utf-8;base64,${fontData}");}`;
 }
 
-if (!document.getElementById('scratch-font-styles')) {
-	const documentStyleTag = document.createElement('style');
-	documentStyleTag.id = 'scratch-font-styles';
-	for (const fontName in FONTS) {
-	    documentStyleTag.textContent += FONTS[fontName];
-	}
-	document.body.insertBefore(documentStyleTag, document.body.firstChild);
+window.onload = function() {
+    if (!document.getElementById('scratch-font-styles')) {
+        const documentStyleTag = document.createElement('style');
+        documentStyleTag.id = 'scratch-font-styles';
+        for (const fontName in FONTS) {
+            documentStyleTag.textContent += FONTS[fontName];
+        }
+        document.body.insertBefore(documentStyleTag, document.body.firstChild);
+    }
 }
 
 module.exports = {
